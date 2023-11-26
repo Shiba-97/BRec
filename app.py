@@ -24,7 +24,7 @@ selected_book_name = st.selectbox(
 
 if st.button('Recommend'):
     recommendations = recommend(selected_book_name)
-    col1, col2, col3, col4, col5= st.rows(5)
+    col1, col2, col3, col4, col5= st.column(5)
 
     with col1:
         st.text(recommendations[0])
