@@ -8,12 +8,12 @@ books = pickle.load(open(r"books.pkl",'rb'))
 
 
 def recommend(book):
-  index=final[final['title']==str(book)].index[0]
+  index=books[books['title']==str(book)].index[0]
   ss=sim[index]
   booklist=sorted(list(enumerate(ss)),reverse=True,key=lambda x:x[1])[:6]
   var=[]
   for i in booklist:
-    var.append(final.iloc[i[0]].title)
+    var.append(books.iloc[i[0]].title)
   return var
 
 
