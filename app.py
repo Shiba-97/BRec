@@ -2,9 +2,9 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-books_dict = pickle.load(open(r"D:\BRec\books_dict.pkl",'rb'))
-sim = pickle.load(open(r"D:\BRec\similarity.pkl",'rb'))
-books = pickle.load(open(r"D:\BRec\books.pkl",'rb'))
+books_dict = pickle.load(open(r"books_dict.pkl",'rb'))
+sim = pickle.load(open(r"similarity.pkl",'rb'))
+books = pickle.load(open(r"books.pkl",'rb'))
 
 
 def recommend(book):
